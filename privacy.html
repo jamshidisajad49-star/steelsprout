@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Sprout - Bespoke Metalcraft & Architectural Design</title>
+  <meta name="description" content="Steel Sprout specializes in custom metal shelving, retail displays, and architectural metalwork. We merge industrial durability with magazine-quality aesthetics for discerning commercial and residential spaces in New York.">
+  <link rel="icon" href="favicon.ico">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Custom styles for the editorial-elegant aesthetic */
+    :root {
+      --bs-font-sans-serif: 'Nunito', sans-serif;
+      --bs-font-serif: 'Georgia', serif;
+      --bs-primary: rgb(26, 26, 46); /* Dark primary color */
+      --bs-primary-light: rgb(43, 43, 64);
+      --bs-primary-dark: rgb(15, 15, 30);
+      --bs-secondary: rgb(140, 140, 145);
+      --bs-accent: rgb(186, 160, 122); /* Gold/bronze accent */
+      --bs-background-light: rgb(248, 248, 249);
+      --bs-border-radius: 8px;
+    }
+
+    body {
+      font-family: var(--bs-font-sans-serif);
+      color: var(--bs-primary); /* Default text color */
+      background-color: var(--bs-background-light);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--bs-font-serif);
+      font-weight: 700;
+      color: var(--bs-primary-dark); /* Darker headings */
+    }
+
+    .hero-section {
+      padding-top: 5rem;
+      padding-bottom: 0;
+      background-color: var(--bs-primary); /* Use primary dark for consistency */
+      color: var(--bs-white);
+      min-height: 100vh; /* Ensure hero covers full viewport height on small screens */
+    }
+
+    .hero-image-container {
+      overflow: hidden; /* Ensure image doesn't spill */
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .btn-accent {
+      background-color: var(--bs-accent);
+      color: var(--bs-primary);
+      border-color: var(--bs-accent);
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--bs-border-radius);
+      transition: all 0.3s ease-in-out;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--bs-primary);
+      color: var(--bs-accent);
+      border-color: var(--bs-primary);
+      transform: translateY(-2px); /* Subtle lift on hover */
+    }
+
+    .section-spacing {
+      padding-top: 5rem; /* Generous vertical padding */
+      padding-bottom: 5rem;
+    }
+
+    .card {
+      border-radius: var(--bs-border-radius);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    .card.hover-translate-y:hover {
+      transform: translateY(-8px); /* Medium translateY hover effect */
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    }
+
+    .card.border-start-accent {
+      border-left: 4px solid var(--bs-accent) !important; /* Accent border on the left */
+    }
+
+    .icon-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px; /* Example size */
+      height: 48px;
+      background-color: rgba(var(--bs-accent-rgb), 0.1); /* Light accent background */
+      border-radius: 12px; /* Rounded square */
+    }
+
+    .icon-container svg {
+      color: var(--bs-accent);
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Navbar styling for transparent to solid on scroll */
+    .navbar-scroll {
+      transition: background-color 0.3s ease-out;
+    }
+
+    .navbar-scroll.scrolled {
+      background-color: var(--bs-primary) !important; /* Solid dark background when scrolled */
+    }
+    
+    .navbar-brand {
+      font-family: var(--bs-font-serif);
+      font-weight: 700;
+      color: var(--bs-accent) !important; /* Brand name in accent color */
+    }
+
+    .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.8) !important; /* Lighter white for links */
+        transition: color 0.2s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: var(--bs-accent) !important; /* Accent color on hover */
+    }
+
+    /* Ensure strong contrast for footer */
+    .footer-dark-bg {
+        background-color: var(--bs-primary-dark); /* Dark background */
+        color: var(--bs-white); /* Light text */
+    }
+
+    .footer-dark-bg a {
+        color: var(--bs-accent);
+        text-decoration: none;
+    }
+
+    .footer-dark-bg a:hover {
+        color: var(--bs-white);
+    }
+
+    /* Accessibility for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .card.hover-translate-y:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      .btn-accent:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="50">
+  <header>
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scroll">
+      <div class="container-fluid px-lg-5">
+        <a class="navbar-brand me-auto" href="#">Steel Sprout</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#craftsmanship">Craftsmanship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Commission Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main>
+<style>
+  #privacy-policy-section {
+    padding-top: 7rem;
+  }
+</style>
+<section id="privacy-policy-section">
+    <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1.5rem; color: #333333;">Privacy Policy of SteelSprout</h2>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">SteelSprout is committed to protecting the privacy of our clients and website visitors. This Privacy Policy outlines how we collect, use, and safeguard personal information obtained through our site dedicated to custom metal shelving and fabrication services.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">1. Information We Collect</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">We collect various types of information to provide and improve our specialized metal fabrication services, which include custom metal shelving design and fabrication, retail display solutions, architectural metalwork, welding services, and metal finishing.</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;"><strong>Personal Identification Information:</strong> This includes information you voluntarily provide to us when you inquire about our services, request a quote, or contact us through our online forms. This may include your name, company name, email address, phone number, and project details relevant to your metal fabrication needs.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;"><strong>Usage Data:</strong> We automatically collect information on how our site is accessed and used. This Usage Data may include your computer's Internet Protocol (IP) address, browser type, browser version, the pages of our site that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers, and other diagnostic data. This helps us understand how visitors interact with our service offerings.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;"><strong>Cookies and Tracking Technologies:</strong> We use cookies and similar tracking technologies to track activity on our site and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</li>
+    </ul>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">2. How We Use Your Information</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">The information we collect is utilized for various purposes related to our metal fabrication business:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To provide and maintain our site and the services offered.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To communicate with you regarding your inquiries, quotes, and project updates.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To improve and personalize your experience on our site.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To analyze how our site is used and to monitor its effectiveness.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To detect, prevent, and address technical issues.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">To fulfill legal obligations and requirements.</li>
+    </ul>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">3. Sharing Your Information</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">SteelSprout does not sell, trade, or otherwise transfer your Personal Identification Information to outside parties without your consent, except in good faith belief that such action is necessary to:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">Comply with a legal obligation.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">Protect and defend the rights or property of SteelSprout.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">Prevent or investigate possible wrongdoing in connection with our site.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">Protect the personal safety of users of our site or the public.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">Protect against legal liability.</li>
+    </ul>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">We may share your information with trusted third parties who assist us in operating our site, conducting our business, or serving you, so long as those parties agree to keep this information confidential.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">4. Data Security</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">The security of your data is important to us. We strive to use commercially acceptable means to protect your Personal Information. However, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee its absolute security.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">5. Your Data Protection Rights under GDPR</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">If you are a resident of the European Economic Area (EEA), you have certain data protection rights. SteelSprout aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Information. These rights include:</p>
+    <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right to access, update, or to delete the information we have on you.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right of rectification.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right to object.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right of restriction.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right to data portability.</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.75rem; color: #555555;">The right to withdraw consent.</li>
+    </ul>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">To exercise any of these rights, please contact us at the address provided below. You also have the right to complain to a Data Protection Authority about our collection and use of your Personal Information.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">6. Links to Other Sites</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">Our site may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">7. Changes to This Privacy Policy</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+
+    <h3 style="font-size: 1.75rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #333333;">8. Contact Us</h3>
+    <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1rem; color: #555555;">If you have any questions about this Privacy Policy or our metal fabrication services, please contact us:</p>
+    <ul style="list-style: none; padding-left: 0; margin-bottom: 2rem;">
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.5rem; color: #555555;"><strong>Company Name:</strong> SteelSprout</li>
+        <li style="font-size: 1rem; line-height: 1.5; margin-bottom: 0.5rem; color: #555555;"><strong>Address:</strong> 1811 Greene Avenue, New York, New York, 11385, USA</li>
+    </ul>
+</section>
+</main>

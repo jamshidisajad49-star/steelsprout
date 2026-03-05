@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steel Sprout - Bespoke Metalcraft & Architectural Design</title>
+  <meta name="description" content="Steel Sprout specializes in custom metal shelving, retail displays, and architectural metalwork. We merge industrial durability with magazine-quality aesthetics for discerning commercial and residential spaces in New York.">
+  <link rel="icon" href="favicon.ico">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Custom styles for the editorial-elegant aesthetic */
+    :root {
+      --bs-font-sans-serif: 'Nunito', sans-serif;
+      --bs-font-serif: 'Georgia', serif;
+      --bs-primary: rgb(26, 26, 46); /* Dark primary color */
+      --bs-primary-light: rgb(43, 43, 64);
+      --bs-primary-dark: rgb(15, 15, 30);
+      --bs-secondary: rgb(140, 140, 145);
+      --bs-accent: rgb(186, 160, 122); /* Gold/bronze accent */
+      --bs-background-light: rgb(248, 248, 249);
+      --bs-border-radius: 8px;
+    }
+
+    body {
+      font-family: var(--bs-font-sans-serif);
+      color: var(--bs-primary); /* Default text color */
+      background-color: var(--bs-background-light);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--bs-font-serif);
+      font-weight: 700;
+      color: var(--bs-primary-dark); /* Darker headings */
+    }
+
+    .hero-section {
+      padding-top: 5rem;
+      padding-bottom: 0;
+      background-color: var(--bs-primary); /* Use primary dark for consistency */
+      color: var(--bs-white);
+      min-height: 100vh; /* Ensure hero covers full viewport height on small screens */
+    }
+
+    .hero-image-container {
+      overflow: hidden; /* Ensure image doesn't spill */
+    }
+
+    .hero-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .btn-accent {
+      background-color: var(--bs-accent);
+      color: var(--bs-primary);
+      border-color: var(--bs-accent);
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--bs-border-radius);
+      transition: all 0.3s ease-in-out;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background-color: var(--bs-primary);
+      color: var(--bs-accent);
+      border-color: var(--bs-primary);
+      transform: translateY(-2px); /* Subtle lift on hover */
+    }
+
+    .section-spacing {
+      padding-top: 5rem; /* Generous vertical padding */
+      padding-bottom: 5rem;
+    }
+
+    .card {
+      border-radius: var(--bs-border-radius);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    }
+
+    .card.hover-translate-y:hover {
+      transform: translateY(-8px); /* Medium translateY hover effect */
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    }
+
+    .card.border-start-accent {
+      border-left: 4px solid var(--bs-accent) !important; /* Accent border on the left */
+    }
+
+    .icon-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px; /* Example size */
+      height: 48px;
+      background-color: rgba(var(--bs-accent-rgb), 0.1); /* Light accent background */
+      border-radius: 12px; /* Rounded square */
+    }
+
+    .icon-container svg {
+      color: var(--bs-accent);
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Navbar styling for transparent to solid on scroll */
+    .navbar-scroll {
+      transition: background-color 0.3s ease-out;
+    }
+
+    .navbar-scroll.scrolled {
+      background-color: var(--bs-primary) !important; /* Solid dark background when scrolled */
+    }
+    
+    .navbar-brand {
+      font-family: var(--bs-font-serif);
+      font-weight: 700;
+      color: var(--bs-accent) !important; /* Brand name in accent color */
+    }
+
+    .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.8) !important; /* Lighter white for links */
+        transition: color 0.2s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: var(--bs-accent) !important; /* Accent color on hover */
+    }
+
+    /* Ensure strong contrast for footer */
+    .footer-dark-bg {
+        background-color: var(--bs-primary-dark); /* Dark background */
+        color: var(--bs-white); /* Light text */
+    }
+
+    .footer-dark-bg a {
+        color: var(--bs-accent);
+        text-decoration: none;
+    }
+
+    .footer-dark-bg a:hover {
+        color: var(--bs-white);
+    }
+
+    /* Accessibility for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .card.hover-translate-y:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      .btn-accent:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="50">
+  <header>
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top navbar-scroll">
+      <div class="container-fluid px-lg-5">
+        <a class="navbar-brand me-auto" href="#">Steel Sprout</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#craftsmanship">Craftsmanship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Commission Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+<main>
+<style>
+  #steelsprout-terms-and-conditions {
+    padding-top: 7rem;
+  }
+</style>
+<section id="steelsprout-terms-and-conditions">
+    <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem;">Terms and Conditions for SteelSprout</h2>
+    <p style="font-size: 1rem; margin-bottom: 1.5rem;">Welcome to SteelSprout! These Terms and Conditions govern your use of our website and services. By accessing or using our online platform, you agree to comply with and be bound by these terms. Please read them carefully.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">1. Acceptance of Terms</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">By accessing and using this service, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, as well as our Privacy Policy. If you do not agree with any part of these terms, you must not use our website or services.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">2. Services Provided</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">SteelSprout specializes in custom metal fabrication. Our services include, but are not limited to, custom metal shelving design and fabrication, retail display solutions, architectural metalwork, welding services, and metal finishing. Our website aims to showcase these services and facilitate inquiries.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">3. Use of Our Website</h3>
+    <ul style="font-size: 1rem; list-style: disc; margin-left: 2rem; margin-bottom: 1rem;">
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;">You must be at least 18 years old to use our services or submit inquiries through our site.</p>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;">You agree to use our website only for lawful purposes and in a way that does not infringe the rights of, restrict, or inhibit anyone else's use and enjoyment of the website.</p>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;">You are prohibited from attempting to gain unauthorized access to any part of our website, the server on which our website is stored, or any server, computer, or database connected to our website.</p>
+        </li>
+    </ul>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">4. Intellectual Property</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">All content on this website, including text, graphics, logos, images, and designs, is the property of SteelSprout or its content suppliers and is protected by intellectual property laws. You may not reproduce, distribute, modify, display, or create derivative works from any content on this site without our express written permission.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">5. Limitation of Liability</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">SteelSprout and its affiliates, officers, employees, or agents will not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the service; (ii) any conduct or content of any third party on the service; (iii) any content obtained from the service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">6. Indemnification</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">You agree to indemnify, defend, and hold harmless SteelSprout, its principals, officers, directors, representatives, employees, contractors, licensors, licensees, suppliers, and agents, from and against any claims, losses, damages, liabilities, and expenses (including legal fees), arising out of your use or misuse of the website, any violation of these Terms, or any breach of the representations, warranties, and covenants made by you herein.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">7. Governing Law</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">These Terms shall be governed and construed in accordance with the laws of the State of New York, USA, without regard to its conflict of law provisions.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">8. Changes to Terms</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+
+    <h3 style="font-size: 1.875rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem;">9. Contact Information</h3>
+    <p style="font-size: 1rem; margin-bottom: 1rem;">If you have any questions about these Terms and Conditions, please contact us:</p>
+    <ul style="font-size: 1rem; list-style: none; margin-left: 0; padding-left: 0;">
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;"><strong>Company Name:</strong> SteelSprout</p>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;"><strong>Address:</strong> 1811 Greene Avenue, New York, New York, 11385, USA</p>
+        </li>
+        <li style="margin-bottom: 0.5rem;">
+            <p style="font-size: 1rem; margin-bottom: 0;"><strong>Phone:</strong> +13053998741</p>
+        </li>
+    </ul>
+</section>
+</main>
